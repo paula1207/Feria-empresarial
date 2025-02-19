@@ -1,18 +1,80 @@
+# Feria Empresarial Application
+
+Feria Empresarial is a console-based Java application designed to manage an entrepreneurial fair. It allows users to register and manage companies, stands, visitors, and visits, while also providing reporting and interaction functionalities.
+
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This project is built using **Java** and managed with **Maven** for dependency management. It supports **JUnit 5** and **Mockito** for unit testing.
 
-## Folder Structure
+### Prerequisites
 
-The workspace contains two folders by default, where:
+Before running the application, ensure you have the following installed:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- **Java 11+** (JDK)
+- **Maven**
+- **Visual Studio Code** (or another Java-supported IDE)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Folder Structure
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+The project follows a Maven-based structure:
 
-## Dependency Management
+```
+Feria-empresarial/
+ │-- src/
+ │ ├── main/
+ │ │ ├── java/ # Java source files
+ │ │ │ ├── edu/ean/feriaempresarial/
+ │ │ │ │ ├── model/ # Business logic and entities
+ │ │ │ │ ├── views/ # Console UI screens
+ │ ├── test/
+ │ │ ├── java/ # Unit tests
+ │-- pom.xml # Maven configuration file
+ │-- README.md # Project documentation
+```
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Running the Application
+
+To build and run the project:
+
+```sh
+mvn clean package
+java -jar target/feriaempresarial-1.0-SNAPSHOT.jar
+```
+
+Alternatively, you can run it using VS Code's Java Projects panel.
+
+### Dependency Management
+
+This project uses Maven for managing dependencies. The key dependencies include:
+
+    JUnit 5 – Used for unit testing
+    Mockito – Used for mocking dependencies in tests
+
+To install dependencies, ensure you have Maven installed and run:
+
+```sh
+mvn clean install
+```
+
+### Running Tests
+
+Unit tests are written using JUnit 5 and Mockito. To execute tests, run:
+
+```sh
+mvn test
+```
+
+You can also check the test coverage with:
+```sh
+mvn jacoco:report
+```
+
+### Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m "Add new feature"`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a Pull Request.
+
+
